@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2 ">
+    <div class="col-md-12">
+        <h2>Rooms</h2>
+    </div>
+</div>
+<!--row end-->
+<div class="row p-6 " >
+    {% for b in R %}
+    <div class="col-md-6"data-aos="zoom-in">
+        <div class="col-md-12 p-3 Room  shadow">
+            
+            <a href="/Roomdetail/{{ b.id }}" class="text-decoration-none text-dark">
+            <img src="/media/{{ b.photo }}" width="450" height="350">
+                <h4>{{ b.Roomtitle }}</h4>
+            </a>
+        </div>
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}

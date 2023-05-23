@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h2>My Bookings</h2>
+    </div>
+</div>
+<!--row end-->
+<div class="row p-5 banner3">
+    <div clsss="col-md-12">
+        <h1>My Bookings</h1>
+    </div>
+<table class="table table-bordered table-warning">
+    <tr>
+        <th>Srno</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Room</th>
+        <th>No of Adults</th>
+        <th>No of Children</th>
+        <th>Status</th>
+    </tr>
+     {% for b in book %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ b.checkin }}</td>
+    <td>{{ b.checkout }}</td>
+    <td>{{ b.roomtype  }}</td>
+    <td>{{ b.noofadults }}</td>
+    <td>{{ b.noofchildren }}</td>
+    <td>{{ b.status }}</td>
+  </tr>
+    {% endfor %}
+</table>
+</div> 
+{% endblock%}

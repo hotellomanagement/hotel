@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h1>FAQs</h1>
+        
+    </div>
+</div>
+<!--row end-->
+<div class="row p-5 banner3">
+    <div clsss="col-md-12">
+        
+    </div>
+
+     {% for b in f %}
+    <div class="col-md-12"data-aos="zoom-in" >
+<h4>{{b.question }}</h4>
+<p>{{ b.answer}}</p>
+
+    </div>
+    {% endfor %}
+</div> 
+{% endblock%}

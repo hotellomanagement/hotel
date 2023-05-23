@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h2>Rooms details</h2>
+    </div>
+</div>
+
+<!--row end-->
+<div class="row p-5 ">
+<div class="col-md-5 p-5 room ">
+    <img src="/media/{{ R.photo }}"width="1000" height="500">
+</div>
+    <div class="row p-5 ">
+        <div class="col-md-5 p-5 room">
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="/media/{{ R.photo }}"width="400" height="400">
+        </div>
+            <div class="carousel-item active">
+                <img src="/media/{{ R.photo1 }}"width="400" height="400">
+              </div>
+          <div class="carousel-item active">
+            <img src="/media/{{ R.photo2 }}"width="400" height="400">
+          </div>
+          <div class="carousel-item">
+            <img src="/media/{{ R.photo3}}"width="400" height="400">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+        </div>
+<div class="row p-5 banner3">
+        <div class="col-md-5 p-4">
+                <h1>{{ R.Roomtitle }} ({{ R.roomtype }})</h1>
+                <h4>{{ R.noofbeds }} {{ R.typeofbed }} Beds</h4>
+               
+                <h4>Rating: {{ R.Rating }}</h4>
+                <h4>{{ R.Isavilableroom }}</h4>
+           
+                <h4>&#8377;{{ R.price }} per Night</h4>
+        </div>
+              
+               
+                <div class="col-md-6 ps-5">
+                <h5>{{ R.facilities|safe }}</h5>
+                </div>
+                <div class="row p-4">
+                                       
+                    <h3 class="text-center">AMENITIES</h3>
+                
+                        <div class="col-md-4">
+                            <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            A/C</h5>
+                            <h5> <img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            LED</h5>
+                            <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            Dish TV</h5>
+                            <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            Wi-Fi</h5>
+                            <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            Telephone / Intercom</h5>
+                            <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                            Mini Bar</5>
+                           
+                            
+                                
+                             
+                      </div>
+                      <div class="col-md-4">
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Attached Bathrooms</h5>
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Bath Toiletries</h5>
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        24 hours running hot and cold water</p>
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Spotless Linen & Towels</h5>
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Comfortable Mattress</h5>
+                        <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Cupboards</h5>
+                     
+                </div>
+                <div class="col-md-4">
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Travel Desk</h5>
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Railway Station / Airport Transfer</h5>
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Laundry services</h5>
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Restaurant / Dining Areas</h5>
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Room Service</h5>
+                    <h5><img src="{% static 'kk4.png'%}"height="20"width="20"/>
+                        Doctor on Call</h5>
+                   
+                
+                
+               
+               
+           
+
+ <a href="/booking/"><button class ="btn-warning">BOOK NOW</button></a>
+                    </div>
+            </div>
+</div>
+
+<!--row end-->
+   
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+    <head>
+        <title>form</title>
+        <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" />
+<link href="{% static 'css/bootstrap.grid.min.css'%}" rel="stylesheet" />
+ <link href="{% static 'style.css'%}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+                    <form>
+                        <lable>name</lable>
+                        <input type="text" class="form-control" place folder="enter name" pattern="[A-Za-Z"/>
+                        <label>phone</label>
+                        <input type="tel" class="form-control" maxlength="10" pattern="[6|7|8|9]{0-9}[9]" />
+                        <lable>email</lable>
+                        <input type="email" class="form-control" />
+                        <lable>Address</lable>
+                        <textarea class="form-control"></textarea>
+                        <label>gender</label>
+                        <input type="radio" name="gen"/>
+                        <lable>female</lable>
+                        <input type="radio" name="gen"/>
+                        <lable>male</lable>
+                        <br>
+                        <lable>course</lable>
+                        <select class="form-control">
+                        <option value="">select coures=</option>
+                        <option>css</option>
+                        <option>html</option>
+                        <option>java</option>
+                        <option>python</option>
+                        <option>web</option>
+                        </select>
+                        <lable>date</lable>
+                        <input type="date" class="form-control"/>
+                        <lable>time</lable>
+                        <input type="time" class="form-control"/>
+                        <lable>pic</lable>
+                        <input type="file" class="form-control" accept="jpg.png.pdf.web"/>
+                        <button type="submit" class="btn btn-warning">submit</button> 
+                        <button type="reset">clear</button>       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

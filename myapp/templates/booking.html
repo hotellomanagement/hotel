@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner3">
+    <div class="col-md-12">
+        <h2>BOOKING</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-3 p-5">
+{% if user.is_authenticated %}
+
+
+            <form action="/insertbooking/"method="post">
+                {% csrf_token %}
+    
+                <labei>first name</labei>
+                <input type="text" class="form-control mb-3"placeholder="First name" name="firstname">
+                <labei>last name</labei>
+                <input type="text" class="form-control mb-3"placeholder="Last name" name="lastname">
+                <label>checkin</label>
+                <input type="date" class="form-control mb-3"placeholder="checkout" name="checkin">
+                <label>checkout</label>
+                <input type="date" class="form-control mb-3"placeholder="checkout" name="checkout">
+                <label>phonenumber </label>
+                <input type="tel"class="form-control mb-3"placeholder="phonenumber " name="phonenumber">
+                <label>emailid</label>
+                <input type="email"class="form-control mb-3"placeholder="Email" name="emailid">
+                <label>Select Room</label>
+                <select class="form-control" name="roomtype">
+                    <option value="">-Select-</option>
+                    {% for r in r %}
+                    <option value="{{ r.id }}">{{ r.Roomtitle }}</option>
+                   {% endfor %}
+                    </select>
+                    <label> noofadults</label>
+                    <input type="number"class="form-control mb-3"placeholder="Number of Adults" name="noofadults">
+                    <label> noofchildren</label>
+                    <input type="number"class="form-control mb-3"placeholder="Number of Children" name="noofchildren">
+               <input type="hidden" name="userid" value="{{ user.id }}" />
+               <input type="hidden" name="status" value="Pending" />
+                <button class=" btn-warning"type="submit">send</button>
+
+
+            </form>
+            {% else %}
+            <a href="/login/"><button class="btn btn-warning">Login to Book your Room</button></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

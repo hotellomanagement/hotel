@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h2>BLOG</h2>
+    </div>
+</div>
+<div class="row ">
+<div class="col-md-12">
+</div>
+{% for b in blg %}
+<div class="col-md-4 p-4" data-aos="zoom-in">
+    <a href="/blogdetail/{{ b.id }}" class="text-decoration-none text-dark">
+    <h3>{{b.title}}</h3>
+    <img src="/media/{{ b.photo }}"width="100%" height="300"/>
+    
+    <p>{{b.postby}} ({{b.poston}})</p>
+    </a>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h2>gallary</h2>
+    </div>
+</div>
+<!--rowend-->
+<div class="row p-4 banner3 ">
+<h1>All photos</h1>
+</div>
+<div class="row p-4 ">
+
+<div class="col-md-4"data-aos="fade-down">
+    <img src="{% static '2.png' %}" height="300" width="300">
+</div>
+<div class="col-md-4"data-aos="fade-right">
+    <img src="{% static 'h1.jpg' %}" height="300" width="300">
+</div>
+<div class="col-md-4"data-aos="fade-left">
+    <img src="{% static 'h2.jpg' %}" height="300" width="300">
+</div>
+</div>
+<!--row end-->
+<div class="row p-4">   
+<div class="col-md-4"data-aos="fade-down">
+    <img src="{% static '1-11.jpg' %}" height="300" width="300">
+</div>
+<div class="col-md-4"data-aos="fade-right">
+    <img src="{% static 'rr2.jpeg' %}" height="300" width="300">
+</div>  
+<div class="col-md-4" data-aos="fade-left">
+    <img src="{% static 's10.jpg' %}" height="300" width="300">
+</div>
+</div>
+<!--row end-->
+<div class="row p-4">   
+    <div class="col-md-4"data-aos="fade-down">
+        <img src="{% static 'ss2.jpg' %}" height="300" width="300">
+    </div>
+    <div class="col-md-4"data-aos="fade-right">
+        <img src="{% static 'c4.jpg' %}" height="300" width="300">
+    </div>
+    <div class="col-md-4"data-aos="fade-left">
+        <img src="{% static 's8.jpeg' %}" height="300" width="300">
+    </div>   
+</div> 
+<!--row end-->
+<div class="row p-4">   
+    <div class="col-md-4"data-aos="fade-down">
+        <img src="{% static 'hhh.jpg' %}" height="300" width="300">
+    </div>
+    <div class="col-md-4"data-aos="fade-right">
+        <img src="{% static 'hhh3.jpg' %}" height="300" width="300">
+    </div>
+    <div class="col-md-4"data-aos="fade-left">
+        <img src="{% static 'hhh2.jpg' %}" height="300" width="300">
+    </div>   
+</div> 
+{% endblock %}

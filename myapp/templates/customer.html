@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+                        
+<div class="row">
+    <div class="col-md-6 offset-3 p-5">
+         <form action="/insertcustomer/"method="post">
+             {% csrf_token %}
+                
+            <input type="text"name="customerid"class="form-control mb-3"placeholder="customerid">
+            <input type="text"name="firstname"class="form-control mb-3"placeholder="firstname">
+          <input type="text"name="lastname"class="form-control mb-3"placeholder="lastname">
+        <input type="text"name="address"class="form-control mb-3"placeholder="address">
+        <input type="text"name="city"class="form-control mb-3"placeholder="city">
+        <input type="text"name="country"class="form-control mb-3"placeholder="country">
+      <input type="text"name="emailid"class="form-control mb-3"placeholder="emailid">
+        <button class="btn btn-warning"type="submit">send</button>
+                            </form>
+                        </div>
+                    
+                </div>
+                {% endblock %}
+            
+        

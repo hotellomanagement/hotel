@@ -1,0 +1,74 @@
+/*#heading1{
+    color:blue;
+    font-style:44px;
+    background:green;
+    text-align: center;
+}
+#image{
+    border:6px ridge green;
+    border-radius:20px;
+    box-shadow:14px 10px 10px black;
+}
+#main{
+    background:url('a.webp');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}*/
+
+#header, #footer{
+    background:chocolate;
+
+   padding: 20px ;
+}
+#header a {color:white; font-weight:bold;}
+#banner
+{
+    background: url('h3.jpg');
+   
+    background-size:cover;
+
+   color:white;
+}
+#banner>.col-md-12{
+    background: rgba(0,0,0,0.5);
+    padding: 50px 50px 200px 50px ;
+}
+#as{
+    background:url('6.jpg');
+    background-size:cover;
+    background-position:center;
+}
+#as>.col-md-12{
+    background:rgba(0,0,0,0.4);
+ 
+    
+}
+
+.banner2{
+    background:url('h.jpg');
+    padding: 100px;
+    color:black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.myfont{
+    font-family:'pacifico',cursive;
+}
+.banner3{
+    background:rgba(0,0,0,0.5) url('h9.jpg');
+    padding: 100px;
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    color:white;
+}
+.banner4{
+    background:url('image(2).jpg');
+    padding: 100px;
+    background-position: center;
+    background-size: cover;
+}
+.card{
+    color:black;
+}

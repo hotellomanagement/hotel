@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row p-5 banner3">
+    <div class="col-md-12 p-5">
+        <div class="row p-5">
+<div class="col col-md-4  offset-4 p-3">
+    <form method="post"id="signform">
+        {% csrf_token %}
+       <h4>{{ form.as_p }}</h4>
+        <button class="btn-warning">login</button>
+    </form>
+    <a href="/signup/" class="text-light">New User? Register Now</a>
+ </div>
+ </div>   
+</div>
+</div>
+{% endblock%}

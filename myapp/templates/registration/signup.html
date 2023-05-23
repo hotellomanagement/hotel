@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row p-5 banner3">
+    <div class="col-md-12 p-5">
+        <div class="row p-5">
+            <div class="col-md-6 offset-3 p-5">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="row">
+            <div class="col-md-6">
+            <h4>{{ field.label }}</h4>
+        </div>
+            <div class="col-md-6">
+            {{ field }}
+            </div>
+        </div>
+
+            {% for error in field.errors %}
+            <p class="text-danger">{{ error }}</p>
+            {% endfor %}
+            <br>
+            {% endfor %}
+            <button class=" btn-warning">Register</button>
+        </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

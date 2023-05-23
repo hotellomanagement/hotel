@@ -1,0 +1,20 @@
+#image{
+    border:6px ridge green;
+    border-radius:20x;
+    box-shadow:1px 10px white;
+
+}
+#image{
+    background-image:url('h6.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+}
+
+ 
+
+
+
+
+

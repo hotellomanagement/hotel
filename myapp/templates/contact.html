@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row banner2">
+    <div class="col-md-12">
+        <h2>contact</h2>
+    </div>
+  </div>
+ 
+<div class="row">
+    <div class="col-md-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d110335.77919816373!2d74.87628434245617!3d30.208744384366472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x39173297173abbcd%3A0xa00033c0a58a5ac8!2sBathinda%2C%20Punjab!3m2!1d30.210994!2d74.9454745!5e0!3m2!1sen!2sin!4v1683779779990!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    <div class="row banner3">
+        <div class="col-md-6 offset-3 p-5">
+            <h2>Feel free to write us...</h2>
+            <form action="/insertcontact/"method="post">
+                {% csrf_token %}
+                <input type="text"name="firstname"class="form-control mb-3"placeholder="name">
+                <input type="text"name="email"class="form-control mb-3"placeholder="Email">
+                <input type="text"name="subject"class="form-control mb-3"placeholder="Subject">
+                <textarea class="form-control mb-3"name="message"placeholder="Message"></textarea>
+               
+                <button class="btn btn-warning"type="submit">send</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
